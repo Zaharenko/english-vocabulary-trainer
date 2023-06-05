@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <meta name="theme-color" content="#007bff" />
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="English Vocabulary Trainer" />
+  <meta property="og:title" content="English Vocabulary Trainer" />
+  <meta property="og:description" content="
+  English Vocabulary Trainer is a cool app where you can test your English skills with fun word games. It gives you a bunch of words and challenges you to show off your knowledge. Plus, it keeps track of your progress and gives you instant feedback on how you did.
+  The app is super easy to use and has a bunch of interactive exercises that make learning vocab a breeze. It's perfect for anyone who wants to boost their English skills, whether you're a language learner or just want to get better at English.
+  So, if you're looking for a fun and effective way to improve your English vocab, give English Vocabulary Trainer a try. It's a total game-changer!
+  " />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <!-- Open Graph End-->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>English Vocabulary Trainer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #stat {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex flex-col h-screen overflow-hidden">
+    <header class="w-full text-center border-b border-grey p-4">
+      <h1 class="text-3xl font-bold" aria-label="English Vocabulary Trainer">
+        English Vocabulary Trainer
+      </h1>
+    </header>
+
+    <main class="flex-1 py-10 px-10">
+      <div class="flex flex-col items-center text-center">
+        <p class="lead mb-1" aria-label="Description">
+          Form a valid English word using the given letters
+        </p>
+        <p class="my-5">
+          Question
+          <span id="current_question" aria-labelledby="current_question_label"
+            class="font-bold">${this.props.current}</span>
+          of
+          <span id="total_questions" aria-labelledby="total_questions_label"
+            class="font-bold">${this.props.total}</span>
+        </p>
+        <div id="quiz">
+          <div class="my-2">
+            <div id="answer" class="rounded bg-slate-300 h-20 py-2 px-2 flex items-center text-center"></div>
+            <div id="shuffled" class="justify-center flex"></div>
+          </div>
+          <div>
+            <div id="letters" class="mx-1 mb-3 rounded h-20"></div>
+          </div>
+        </div>
+        <div id="stat" class="flex-col items-center text-center"></div>
+      </div>
+    </main>
+
+    <footer class="w-full text-center border-t border-grey p-4">
+      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+            class="hover:underline">Fundraise-up™</a>. All
+          Rights Reserved.
+        </span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
